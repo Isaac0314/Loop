@@ -1,0 +1,28 @@
+# One command to run the whole thing:  docker compose up --build
+# Then open http://localhost:8080  (frontend; it proxies /api to the backend).
+#
+# The Kimi key is optional - without it the AI endpoints fall back to
+# deterministic output. Pass it via the shell or a root .env file:
+#   KIMI_API_KEY=sk-... docker compose up --build
+
+services:
+  backend:
+    build: ./backend
+    environment:
+      DATABASE_URL: sqlite:////data/lightwork.db
+      KIMI_API_KEY: ${KIMI_API_KEY:-}
+      CORS_ORIGINS: "*"
+    volumes:
+      - lw-data:/data
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+
+volumes:
+  lw-data:
