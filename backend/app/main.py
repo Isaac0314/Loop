@@ -24,7 +24,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="LightWork Ops API", version="0.1.0", lifespan=lifespan)
+app = FastAPI(title="Loop AI API", version="0.1.0", lifespan=lifespan)
 
 _origins = ["*"] if settings.cors_origins.strip() == "*" else [
     o.strip() for o in settings.cors_origins.split(",") if o.strip()
@@ -43,4 +43,4 @@ app.include_router(agent.router)
 
 @app.get("/", tags=["meta"])
 def root():
-    return {"name": "LightWork Ops API", "docs": "/docs", "health": "/api/health"}
+    return {"name": "Loop AI API", "docs": "/docs", "health": "/api/health"}

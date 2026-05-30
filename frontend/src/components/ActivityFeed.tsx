@@ -44,7 +44,7 @@ export function ActivityFeed({
   }
   const onMail = (e: Activity) => {
     const c = byId.get(e.commitment_id)
-    const subject = 'LightWork: ' + (c ? c.title : 'update')
+    const subject = 'Loop AI: ' + (c ? c.title : 'update')
     window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(draft(e))}`
   }
 

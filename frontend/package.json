@@ -1,9 +1,9 @@
 {
-  "name": "lightwork-ops-frontend",
+  "name": "loop-ai-frontend",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "React + Vite client for LightWork Ops - a thin, typed view layer over the FastAPI backend.",
+  "description": "React + Vite client for Loop AI - a thin, typed view layer over the FastAPI backend.",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

@@ -1,4 +1,4 @@
-# LightWork Ops API. SQLite by default; set DATABASE_URL for Postgres.
+# Loop AI API. SQLite by default; set DATABASE_URL for Postgres.
 FROM python:3.12-slim
 
 ENV PYTHONUNBUFFERED=1 \

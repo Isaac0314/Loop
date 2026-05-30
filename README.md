@@ -1,4 +1,4 @@
-# LightWork Ops
+# Loop AI
 
 **A founder's-office operations agent that tracks commitments across teams, computes their status deterministically, and uses an LLM only to write the words.**
 
@@ -9,7 +9,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-LightWork Ops answers a founder's recurring question, *"what did we commit to, and what's slipping?"*, and then does something about it: it nudges owners, escalates patterns, drafts the messages, and writes a weekly brief.
+Loop AI answers a founder's recurring question, *"what did we commit to, and what's slipping?"*, and then does something about it: it nudges owners, escalates patterns, drafts the messages, and writes a weekly brief.
 
 The interesting part is the architecture, not the to-do list.
 
@@ -36,7 +36,7 @@ See **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** for the full write-up.
 
 <!-- To add a screenshot to this README: run the app (one command, below), grab the
      dashboard, save it as docs/screenshot.png, and uncomment the line beneath. -->
-<!-- ![LightWork Ops dashboard](docs/screenshot.png) -->
+<!-- ![Loop AI dashboard](docs/screenshot.png) -->
 
 The dashboard is a calm, Linear/Attio-flavoured board: a **weekly brief** hero, a sortable **commitments list** (and a **Gantt timeline**), and an **agent activity rail** showing every nudge and escalation the agent has taken, each with copy-ready Slack/email drafts.
 
@@ -99,7 +99,7 @@ All backend settings are environment variables (see `backend/.env.example`). Eve
 
 | Variable | Default | Purpose |
 | --- | --- | --- |
-| `DATABASE_URL` | `sqlite:///./lightwork.db` | SQLite by default; point at Postgres for production. |
+| `DATABASE_URL` | `sqlite:///./loop_ai.db` | SQLite by default; point at Postgres for production. |
 | `KIMI_API_KEY` | _(empty)_ | Moonshot/Kimi key. Empty means deterministic fallbacks. **Stays server-side; never sent to the browser.** |
 | `KIMI_MODEL` | `moonshot-v1-32k` | Model for the brief and parsing. |
 | `CORS_ORIGINS` | `*` | Comma-separated allow-list; lock down in production. |
@@ -133,7 +133,7 @@ Interactive docs (Swagger) are at `/docs` when the backend is running.
 ## Project structure
 
 ```
-lightwork-ops/
+loop-ai/
 ├── backend/                 FastAPI + SQLAlchemy 2.0 + Pydantic v2
 │   ├── app/
 │   │   ├── status.py        the deterministic engine (the heart)

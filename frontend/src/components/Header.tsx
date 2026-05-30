@@ -10,7 +10,7 @@ export function Header({ onAsk, onNew }: { onAsk: () => void; onNew: () => void 
       <div className="brand">
         <div className="logo">L</div>
         <span className="wm">
-          LightWork <i>Ops</i>
+          Loop <i>AI</i>
         </span>
       </div>
       <div className="spacer" />

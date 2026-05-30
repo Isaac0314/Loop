@@ -1,10 +1,10 @@
 # Architecture
 
-This document explains *why* LightWork Ops is built the way it is. The headline:
+This document explains *why* Loop AI is built the way it is. The headline:
 
 > **Code owns the facts. The LLM owns the language.**
 
-Most "AI app" demos let the model do everything (read the data, decide what matters, and phrase the answer), which is exactly how you get confident, wrong answers. LightWork Ops draws a hard line between the two responsibilities.
+Most "AI app" demos let the model do everything (read the data, decide what matters, and phrase the answer), which is exactly how you get confident, wrong answers. Loop AI draws a hard line between the two responsibilities.
 
 ---
 

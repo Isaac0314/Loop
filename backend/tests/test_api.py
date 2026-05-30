@@ -5,7 +5,7 @@ import os
 import tempfile
 
 # Point at a clean temp DB *before* the app imports its config.
-_db = os.path.join(tempfile.gettempdir(), "lw_pytest.db")
+_db = os.path.join(tempfile.gettempdir(), "loop_pytest.db")
 if os.path.exists(_db):
     os.remove(_db)
 os.environ["DATABASE_URL"] = "sqlite:///" + _db.replace("\\", "/")

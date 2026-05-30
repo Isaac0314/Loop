@@ -10,7 +10,7 @@ class Settings(BaseSettings):
 
     # Database. SQLite by default (zero-config); set DATABASE_URL to a Postgres
     # DSN in production, e.g. postgresql+psycopg://user:pass@host/db
-    database_url: str = "sqlite:///./lightwork.db"
+    database_url: str = "sqlite:///./loop_ai.db"
 
     # Kimi (Moonshot) API. Brief / milestones / act use the fast model;
     # the conversational Ask can use a higher-quality one if you have access.

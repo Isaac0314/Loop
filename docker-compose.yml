@@ -9,11 +9,11 @@ services:
   backend:
     build: ./backend
     environment:
-      DATABASE_URL: sqlite:////data/lightwork.db
+      DATABASE_URL: sqlite:////data/loop_ai.db
       KIMI_API_KEY: ${KIMI_API_KEY:-}
       CORS_ORIGINS: "*"
     volumes:
-      - lw-data:/data
+      - loop-data:/data
     ports:
       - "8000:8000"
 
@@ -25,4 +25,4 @@ services:
       - "8080:80"
 
 volumes:
-  lw-data:
+  loop-data:
